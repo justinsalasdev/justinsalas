@@ -1,0 +1,24 @@
+@import "../common/variables.scss";
+
+.navigation {
+	width: 100%;
+
+	&__list {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr auto auto auto 2%;
+		justify-items: center;
+		align-items: center;
+	}
+
+	&__brand {
+		justify-self: left;
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		color: $white;
+		font-weight: 700;
+		padding: 1rem;
+	}
+}

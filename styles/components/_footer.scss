@@ -1,0 +1,11 @@
+@import "../common/variables.scss";
+.footer {
+	height: 4rem;
+	background: linear-gradient(
+			20deg,
+			rgba($primary-light-20, 0.9),
+			rgba($primary-dark-30, 0.9)
+		),
+		url("/images/toolBG.jpg") center/cover no-repeat;
+	box-shadow: -0.2rem -0.2rem 0.4rem $shadow-inactive;
+}

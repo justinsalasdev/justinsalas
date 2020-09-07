@@ -1,0 +1,20 @@
+@import "../common/variables.scss";
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__action {
+		font-size: 3rem;
+		font-weight: 700;
+		vertical-align: center;
+
+		&-icon {
+			font-size: 2rem;
+			vertical-align: middle;
+			transform: translateY(-0.2rem);
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import "../common/variables.scss";
+
+#__next {
+	background: linear-gradient(
+			20deg,
+			rgba(whitesmoke, 0.95),
+			rgba(white, 0.95),
+			rgba(whitesmoke, 0.95)
+		),
+		url("/images/mainBG.jpg") center/cover no-repeat;
+	min-height: 100vh;
+	position: relative;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+}
