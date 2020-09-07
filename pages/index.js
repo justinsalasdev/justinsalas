@@ -1,4 +1,4 @@
-import Toolbar from "../components/toolbar"
+import Toolbar from "../components/Toolbar"
 import { GiPalmTree } from "react-icons/gi"
 import { WiDaySunnyOvercast } from "react-icons/wi"
 import { RiLightbulbFlashLine } from "react-icons/ri"
