@@ -1,5 +1,5 @@
 import nextConnect from "next-connect"
-import initDB from "../../initDBs/initDB"
+import initDB from "../../middlewares/initDB"
 
 const handler = nextConnect()
 handler.use(initDB)
