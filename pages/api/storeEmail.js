@@ -1,8 +1,8 @@
 import nextConnect from "next-connect"
-import initDB from "../../middlewares/initDB"
+import initDatabase from "../../middlewares/initDatabase"
 
 const handler = nextConnect()
-handler.use(initDB)
+handler.use(initDatabase)
 
 handler.get(async (req, res) => {
 	try {

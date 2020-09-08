@@ -23,7 +23,7 @@ async function database(req, res, next) {
 	}
 }
 
-const initDB = nextConnect()
-initDB.use(database)
+const initDatabase = nextConnect()
+initDatabase.use(database)
 
-export default initDB
+export default initDatabase
