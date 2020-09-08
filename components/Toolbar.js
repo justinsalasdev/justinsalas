@@ -1,4 +1,4 @@
-import Link from "next/link"
+import CustomLink from "./CustomLink"
 import { FaLeaf } from "react-icons/fa"
 
 export default function Toolbar() {
@@ -7,29 +7,29 @@ export default function Toolbar() {
 			<nav className="navigation">
 				<ul className="navigation__list">
 					<li className="navigation__brand">
-						<Link href="/">
+						<CustomLink href="/">
 							<a className="brand">
 								justinSalas
 								<span className="brand__icon">
 									<FaLeaf />
 								</span>
 							</a>
-						</Link>
+						</CustomLink>
 					</li>
 					<li>
-						<Link href="/projects">
+						<CustomLink href="/projects">
 							<a className="navigation__link">Projects</a>
-						</Link>
+						</CustomLink>
 					</li>
 					<li>
-						<Link href="/certifications">
+						<CustomLink href="/certifications">
 							<a className="navigation__link">Certfications</a>
-						</Link>
+						</CustomLink>
 					</li>
 					<li>
-						<Link href="/finance">
+						<CustomLink href="/finance">
 							<a className="navigation__link">Personal Finance</a>
-						</Link>
+						</CustomLink>
 					</li>
 				</ul>
 			</nav>

@@ -3,7 +3,7 @@
 
 .greet {
 	color: $primary-dark-20;
-	font-size: 4.5rem;
+	font-size: 4.3rem;
 	padding: 2rem;
 	text-align: center;
 	max-width: 80rem;
@@ -11,12 +11,15 @@
 
 	&__sun {
 		color: darken(yellow, 5%);
-		vertical-align: middle;
-		font-size: 8rem;
+		// vertical-align: middle;
+		font-size: 6rem;
 		animation: sunlight 2s cubic-bezier(1, 0, 1, 1);
+		animation: glow 2s linear 2s infinite;
 	}
 
 	&__tree {
+		display: inline-block;
+		transform-origin: 0 100%;
 		animation: treeshake 2s linear infinite;
 	}
 }

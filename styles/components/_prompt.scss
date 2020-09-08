@@ -1,32 +1,60 @@
 @import "../common/variables.scss";
 @import "../common/mixins.scss";
+@import "../common/animations.scss";
 
 .prompt {
-  &__backdrop {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: $backdrop-index;
-    left: 0;
-    top: 0;
-    background-color: rgba($primary, 0.8);
-  }
+	&__backdrop {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: $backdrop-index;
+		left: 0;
+		top: 0;
+		background-color: rgba($primary-dark-30, 0.6);
+	}
 
-  &__window {
-    @extend .fixed-center;
-    border-radius: 0.3rem;
-    font-size: 1.4rem;
+	&__window {
+		@extend .fixed-center;
+		border-radius: 0.3rem;
+		font-size: 1.4rem;
 
-    z-index: $prompt-window-index;
-    background-color: $white;
-    box-shadow: $shadow-inactive;
-  }
+		z-index: $prompt-window-index;
+		background-color: $white;
+		box-shadow: $shadow-inactive;
+	}
 
-  &__button {
-    margin: 1rem;
-  }
+	&__bar {
+		height: 4rem;
+		background-color: $danger-light-10;
+	}
 
-  &__message {
-    margin: 1rem;
-  }
+	&__actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__action {
+		&:last-of-type {
+			margin-left: 1rem;
+		}
+	}
+
+	&__message,
+	&__component {
+		@extend .flex-center;
+		padding: 1rem;
+	}
+
+	&__message {
+		text-align: center;
+		&:last-of-type {
+			padding-bottom: 1rem;
+			font-weight: 700;
+			color: $primary;
+		}
+		font-size: 1.6rem;
+		max-width: 30rem;
+		color: $primary-dark-30;
+	}
 }

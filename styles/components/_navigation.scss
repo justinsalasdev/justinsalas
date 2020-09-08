@@ -1,3 +1,4 @@
+@import "../common/animations.scss";
 @import "../common/variables.scss";
 
 .navigation {
@@ -16,9 +17,20 @@
 	}
 
 	&__link {
+		display: block;
 		font-size: 1.6rem;
 		color: $white;
 		font-weight: 700;
 		padding: 1rem;
+
+		&:focus,
+		&:active {
+			color: $primary-light-20;
+		}
+
+		&--active {
+			animation: link-active 0.2s ease-out;
+			color: $primary-light-40;
+		}
 	}
 }

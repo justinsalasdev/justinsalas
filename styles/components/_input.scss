@@ -11,7 +11,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	border: 0.1rem solid $platinum-dark-5;
 	// outline: none;
-	-webkit-text-fill-color: $primary;
+	-webkit-text-fill-color: $primary-dark-20;
 	box-shadow: none;
 	-webkit-box-shadow: 0 0 0px 1000px transparent inset;
 	transition: background-color 5000s ease-in-out 0s;
@@ -25,40 +25,8 @@ select:-webkit-autofill:focus {
 
 	@extend .flex-center;
 
-	&--productName {
-		grid-area: productName;
-	}
-
-	&--name {
-		grid-area: name;
-	}
-
-	&--email {
-		grid-area: email;
-	}
-
-	&--password {
-		grid-area: password;
-	}
-
-	&--brand {
-		grid-area: brand;
-	}
-
-	&--model {
-		grid-area: model;
-	}
-
-	&--price {
-		grid-area: price;
-	}
-
-	&--quantity {
-		grid-area: quantity;
-	}
-
 	&__field {
-		color: $primary;
+		color: $primary-dark-20;
 		border: 0.1rem solid $platinum-dark-5;
 		border-radius: 0.5rem;
 		background-color: transparent;
@@ -76,7 +44,7 @@ select:-webkit-autofill:focus {
 		&:focus-within,
 		&:not(:placeholder-shown) {
 			& + .input__label {
-				color: $primary;
+				color: $primary-dark-20;
 				font-size: 1.15rem;
 				left: $label-left-offset;
 				top: 0;

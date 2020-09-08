@@ -1,5 +1,9 @@
 @import "../common/variables.scss";
+@import "../common/mixins.scss";
+
 .footer {
+	color: $white;
+	@extend .flex-center;
 	height: 4rem;
 	background: linear-gradient(
 			20deg,
