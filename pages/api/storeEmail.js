@@ -4,13 +4,28 @@ import initDatabase from "../../middlewares/initDatabase"
 const handler = nextConnect()
 handler.use(initDatabase)
 
-handler.get(async (req, res) => {
+handler.post(async (req, res) => {
 	try {
-		const emails = await req.db.collection("emails")
-		const result = await emails.insertOne({ name: "email@email.com" })
-		res.json(result)
+		const emails = req.db.collection("emails")
+		await emails.insertOne(req.body)
+		res.status(200).json({
+			info: {
+				message: "Email saved successfully",
+				type: "save",
+				from: "db"
+			}
+		})
 	} catch (error) {
-		console.log(error)
+		console.log("**** save email ****", error)
+		if (error.keyPattern) {
+			res.status(400).json({
+				error: {
+					message: "Email already listed",
+					type: "client",
+					from: "db"
+				}
+			})
+		}
 		res.status(500).json({
 			error: {
 				message: "Error saving email",

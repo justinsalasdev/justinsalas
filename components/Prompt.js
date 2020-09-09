@@ -54,7 +54,7 @@ export default function Prompt(props) {
 			<div className="prompt__window">
 				<div className="prompt__bar"></div>
 				{message1 && <p className="prompt__message">{message1}</p>}
-				{message2 && <p className="prompt__message">{message2}</p>}
+				{message2 && <p className="prompt__message2">{message2}</p>}
 				{children}
 				{type && <div className="prompt__actions">{renderAction(type)}</div>}
 			</div>

@@ -1,22 +1,41 @@
 import { MongoClient } from "mongodb"
 import nextConnect from "next-connect"
 
-const dbName = "justinsalas"
-const URI = `mongodb://127.0.0.1:27017/${dbName}compressors=zlib&gssapiServiceName=mongodb`
+const URI = process.env.NEXT_PUBLIC_MONGODB_URI
+const dbName = process.env.NEXT_PUBLIC_DBNAME
 
 const client = new MongoClient(URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
 
-async function database(req, res, next) {
+async function initDB(req, res, next) {
 	try {
 		if (!client.isConnected()) await client.connect()
 		req.db = client.db(dbName)
 		return next()
-	} catch {
+	} catch (error) {
 		res.status(500).json({
-			message: "Something went wrong",
+			message: "Error initializing db",
+			type: "connect",
+			from: "db"
+		})
+	}
+}
+
+//ensure that collection contains at least one document
+async function createIndex(req, res, next) {
+	try {
+		const emails = req.db.collection("emails")
+		if (await emails.indexExists("email")) {
+			next()
+		} else {
+			await emails.createIndex({ email: 1 }, { unique: true, name: "email" })
+			next()
+		}
+	} catch (error) {
+		res.status(500).json({
+			message: "Error creating index",
 			type: "connect",
 			from: "db"
 		})
@@ -24,6 +43,6 @@ async function database(req, res, next) {
 }
 
 const initDatabase = nextConnect()
-initDatabase.use(database)
+initDatabase.use(initDB).use(createIndex)
 
 export default initDatabase

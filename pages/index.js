@@ -5,20 +5,41 @@ import { RiLightbulbFlashLine } from "react-icons/ri"
 import Prompt from "../components/Prompt"
 import Form from "../components/Form"
 import { useState } from "react"
+import useSaveEmail from "../hooks/useSaveEmail"
 
 export default function Home() {
 	const [formShown, showForm] = useState(false)
 
+	const [state, dispatch, saveEmail] = useSaveEmail()
+	const { alertShown, error } = state
+
+	const errorProps = {
+		type: "single",
+		message1: error ? error.message : "",
+		acknowledge: () => dispatch({ type: "acknowledge" })
+	}
+
+	const formProps = {
+		showForm,
+		saveEmail,
+		state,
+		dispatch
+	}
+
 	return (
 		<>
-			{formShown ? (
+			{alertShown && error && error.type !== "client" ? (
+				<Prompt {...errorProps} />
+			) : null}
+
+			{formShown && !alertShown ? (
 				<Prompt
 					message1={
 						"Your developer can't take any more projects at the moment."
 					}
 					message2={"Let me give you an update."}
 				>
-					<Form showForm={showForm} />
+					<Form {...formProps} />
 				</Prompt>
 			) : null}
 			<Toolbar />

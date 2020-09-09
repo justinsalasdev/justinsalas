@@ -1,4 +1,5 @@
 @import "../common/variables.scss";
+@import "../common/mixins.scss";
 
 .form {
 	width: 100%;
@@ -7,6 +8,8 @@
 		width: 100%;
 		text-align: center;
 		// box-shadow: 0.3rem 0.3rem 0.6rem $shadow-inactive;
+		@extend .flex-center;
+		flex-direction: column;
 		border-radius: 1rem;
 
 		&--prompt {
@@ -17,7 +20,7 @@
 	}
 
 	&__toolkit {
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 		font-size: 1.5rem;
 		color: $danger-light-30;
 	}

@@ -29,6 +29,7 @@
 	}
 
 	&__actions {
+		padding: 1rem;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -48,13 +49,15 @@
 
 	&__message {
 		text-align: center;
-		&:last-of-type {
+		font-size: 1.6rem;
+		max-width: 30rem;
+		color: $primary-dark-30;
+
+		&2 {
+			@extend .prompt__message;
 			padding-bottom: 1rem;
 			font-weight: 700;
 			color: $primary;
 		}
-		font-size: 1.6rem;
-		max-width: 30rem;
-		color: $primary-dark-30;
 	}
 }

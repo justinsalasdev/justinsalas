@@ -2,6 +2,7 @@ import { FormProvider, useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers"
 import * as Yup from "yup"
 import FormInput from "./FormInput"
+import Spinner from "./Spinner"
 
 const schema = Yup.object({
 	email: Yup.string()
@@ -10,7 +11,8 @@ const schema = Yup.object({
 		.max(64, "must not be longer than 20 characters")
 })
 
-export default function Form({ showForm }) {
+export default function Form({ showForm, saveEmail, state, dispatch }) {
+	const { error, saving } = state
 	const methods = useForm({
 		mode: "all",
 		resolver: yupResolver(schema)
@@ -18,14 +20,19 @@ export default function Form({ showForm }) {
 
 	const { handleSubmit, errors: formErrors } = methods
 
-	function onSubmit() {
-		console.log("Submitting")
+	function handleCancel() {
+		dispatch({ type: "acknowledge" })
+		showForm(false)
 	}
 
 	return (
 		<div className="form__container prompt__component">
+			{error && error.type === "client" ? (
+				<p className="form__toolkit">{error.message}</p>
+			) : null}
+
 			<FormProvider {...methods}>
-				<form onSubmit={handleSubmit(onSubmit)} className={`form`}>
+				<form onSubmit={handleSubmit(saveEmail)} className={`form`}>
 					<FormInput type="text" id="email">
 						Email
 					</FormInput>
@@ -34,17 +41,23 @@ export default function Form({ showForm }) {
 						<button
 							type="button"
 							className="button--danger form__action"
-							onClick={() => showForm(false)}
+							onClick={handleCancel}
 						>
 							Cancel
 						</button>
-						<button
-							disabled={Object.keys(formErrors).length > 0}
-							type="submit"
-							className="button--success form__action"
-						>
-							Submit
-						</button>
+						{saving ? (
+							<div className="spinner__container">
+								<Spinner otherClass="spinner--link" />
+							</div>
+						) : (
+							<button
+								disabled={Object.keys(formErrors).length > 0}
+								type="submit"
+								className="button--success form__action"
+							>
+								Submit
+							</button>
+						)}
 					</div>
 				</form>
 			</FormProvider>
