@@ -28,7 +28,7 @@ function reducer(state, action) {
 			return { ...state, alertShown: true }
 		}
 		case "acknowledge":
-			return { ...state, alertShown: false, error: null }
+			return { ...state, alertShown: false, error: null, saved: false }
 
 		default:
 			return state

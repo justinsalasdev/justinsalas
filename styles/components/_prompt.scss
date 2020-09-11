@@ -25,7 +25,12 @@
 
 	&__bar {
 		height: 4rem;
-		background-color: $danger-light-10;
+		&--pending {
+			background-color: $danger-light-10;
+		}
+		&--success {
+			background-color: $primary;
+		}
 	}
 
 	&__actions {

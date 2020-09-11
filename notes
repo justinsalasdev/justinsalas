@@ -1,7 +1,3 @@
-mongodb URI
 
-atlas
-mongodb+srv://techmechanic:9NJ6zZtnXvtOS4zw@cluster0.bpzsx.mongodb.net/justinsalas?retryWrites=true&w=majority
 
-local
-`mongodb://127.0.0.1:27017/${dbName}compressors=zlib&gssapiServiceName=mongodb`
+create initDB route

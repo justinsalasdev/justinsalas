@@ -11,7 +11,7 @@ export default function Home() {
 	const [formShown, showForm] = useState(false)
 
 	const [state, dispatch, saveEmail] = useSaveEmail()
-	const { alertShown, error } = state
+	const { alertShown, error, saved } = state
 
 	const errorProps = {
 		type: "single",
@@ -26,6 +26,11 @@ export default function Home() {
 		dispatch
 	}
 
+	function acknowledgeSuccess() {
+		dispatch({ type: "acknowledge" })
+		showForm(false)
+	}
+
 	return (
 		<>
 			{alertShown && error && error.type !== "client" ? (
@@ -34,10 +39,19 @@ export default function Home() {
 
 			{formShown && !alertShown ? (
 				<Prompt
+					barModifier={saved ? "success" : "pending"}
+					acknowledge={acknowledgeSuccess}
+					type={saved ? "single" : ""}
 					message1={
-						"Your developer can't take any more projects at the moment."
+						saved
+							? ""
+							: "Your developer can't take any more projects at the moment."
 					}
-					message2={"Let me give you an update."}
+					message2={
+						saved
+							? "Thank you! I'll keep you updated"
+							: "Let me give you an update."
+					}
 				>
 					<Form {...formProps} />
 				</Prompt>

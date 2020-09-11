@@ -46,7 +46,7 @@ export default function Form({ showForm, saveEmail, state, dispatch }) {
 							Cancel
 						</button>
 						{saving ? (
-							<div className="spinner__container">
+							<div className="form__spinner">
 								<Spinner otherClass="spinner--link" />
 							</div>
 						) : (
