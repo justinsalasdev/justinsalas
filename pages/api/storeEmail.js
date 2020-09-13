@@ -1,5 +1,6 @@
 import nextConnect from "next-connect"
 import initDatabase from "../../middlewares/initDatabase"
+import mailer from "../../helpers/mailer"
 
 const handler = nextConnect()
 handler.use(initDatabase)
@@ -8,6 +9,7 @@ handler.post(async (req, res) => {
 	try {
 		const emails = req.db.collection("emails")
 		await emails.insertOne(req.body)
+		await mailer()
 		res.json({
 			info: {
 				message: "Email saved successfully",
