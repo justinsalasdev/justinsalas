@@ -1,8 +1,8 @@
 import { MongoClient } from "mongodb"
 import nextConnect from "next-connect"
 
-const URI = process.env.NEXT_PUBLIC_MONGODB_URI
-const dbName = process.env.NEXT_PUBLIC_DBNAME
+const URI = process.env.MONGO_URL
+const dbName = process.env.MONGO_DBNAME
 
 const client = new MongoClient(URI, {
 	useNewUrlParser: true,
