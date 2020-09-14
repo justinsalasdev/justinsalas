@@ -1,16 +1,27 @@
 @import "../common/variables.scss";
+@import "../common/mixins.scss";
+@import "../common/animations.scss";
+
 .brand {
-	font-family: "Lovers Quarrel";
-	font-size: 6rem;
-	padding: 0.5rem;
 	padding-left: 2rem;
 	display: block;
 	// text-shadow: 0.1rem 0.1rem 0.2rem;
 	color: $white;
 	// font-weight: bold;
 
-	&__icon {
-		font-size: 1.5rem;
-		color: $white;
+	& > div {
+		display: flex;
+		align-items: center;
+		border-radius: 50%;
+		box-shadow: 0.4rem 0.4rem 0.8rem $shadow-inactive;
+		&:active {
+			box-shadow: 0.2rem 0.2rem 0.4rem $shadow-active;
+		}
+	}
+
+	&__logo {
+		height: 7rem;
+		width: 7rem;
+		object-fit: contain;
 	}
 }

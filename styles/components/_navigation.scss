@@ -5,15 +5,24 @@
 	width: 100%;
 
 	&__list {
+		position: relative;
+		height: 5rem;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr auto auto auto 2%;
+		grid-template-columns: 1fr auto auto 2%;
 		justify-items: center;
 		align-items: center;
+
+		& > li:nth-child(2) {
+			justify-self: right;
+		}
 	}
 
 	&__brand {
-		justify-self: left;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		transform: translateY(-50%);
 	}
 
 	&__link {

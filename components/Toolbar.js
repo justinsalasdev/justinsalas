@@ -1,5 +1,4 @@
 import CustomLink from "./CustomLink"
-import { FaLeaf } from "react-icons/fa"
 
 export default function Toolbar() {
 	return (
@@ -9,10 +8,13 @@ export default function Toolbar() {
 					<li className="navigation__brand">
 						<CustomLink href="/">
 							<a className="brand">
-								justinSalas
-								<span className="brand__icon">
-									<FaLeaf />
-								</span>
+								<div>
+									<img
+										src="/icons/teaSVG.svg"
+										alt="to homepage"
+										className="brand__logo"
+									/>
+								</div>
 							</a>
 						</CustomLink>
 					</li>

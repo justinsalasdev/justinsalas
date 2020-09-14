@@ -6,6 +6,7 @@ import Prompt from "../components/Prompt"
 import Form from "../components/Form"
 import { useState } from "react"
 import useSaveEmail from "../hooks/useSaveEmail"
+import Head from "next/head"
 
 export default function Home() {
 	const [formShown, showForm] = useState(false)
@@ -56,6 +57,14 @@ export default function Home() {
 					<Form {...formProps} />
 				</Prompt>
 			) : null}
+			<Head>
+				<title>Justin Salas</title>
+				<link
+					rel="shortcut icon"
+					href="/icons/teaPNG64.png"
+					type="image/x-icon"
+				/>
+			</Head>
 			<Toolbar />
 			<main className="main">
 				<h1 className="greet">

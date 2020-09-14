@@ -9,6 +9,7 @@
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^0.1.0",
+		"@sendgrid/mail": "^7.2.5",
 		"mongodb": "^3.6.1",
 		"next": "^9.5.3",
 		"next-connect": "^0.9.0",
