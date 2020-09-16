@@ -56,10 +56,11 @@ const template = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://idniqi.stripocdn.email/content/guids/CABINET_f899eed06db250c61e10624607122461/images/75981599826945826.png" alt style="display: block;" width="80"></a></td>
+                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://idniqi.stripocdn.email/content/guids/CABINET_f899eed06db250c61e10624607122461/images/34591600253042051.png" alt style="display: block;" width="40"></a></td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text">
+                                                                                        <p style="color: #3c7950; font-family: 'merriweather sans', 'helvetica neue', helvetica, arial, sans-serif; font-size: 18px;"><br></p>
                                                                                         <p style="color: #3c7950; font-family: 'merriweather sans', 'helvetica neue', helvetica, arial, sans-serif; font-size: 18px;"><strong>Thank you for your interest !</strong></p>
                                                                                     </td>
                                                                                 </tr>

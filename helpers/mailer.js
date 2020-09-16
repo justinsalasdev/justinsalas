@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer"
 import emailTemplate from "../constants/emailTemplate"
 
-export default async function mailer() {
+export default async function mailer(email) {
 	let transporter = nodemailer.createTransport({
 		host: "webhost.dynadot.com",
 		port: 587,

@@ -40,7 +40,7 @@ export default function Home() {
 
 			{formShown && !alertShown ? (
 				<Prompt
-					barModifier={saved ? "success" : "pending"}
+					barModifier={saved ? "success" : error ? "error" : "pending"}
 					acknowledge={acknowledgeSuccess}
 					type={saved ? "single" : ""}
 					message1={

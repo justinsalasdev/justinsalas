@@ -43,11 +43,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+
+		@media screen and (max-width: $prompt-breakpoint) {
+			justify-content: flex-end;
+		}
 	}
 
 	&__action {
 		width: 20%;
-		// margin-right: 2rem;
+		@media screen and (max-width: $prompt-breakpoint) {
+			margin-right: 1.5rem;
+		}
 	}
 
 	&__spinner {

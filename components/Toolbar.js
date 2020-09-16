@@ -1,4 +1,5 @@
 import CustomLink from "./CustomLink"
+import { RiHome2Line } from "react-icons/ri"
 
 export default function Toolbar() {
 	return (
@@ -7,14 +8,8 @@ export default function Toolbar() {
 				<ul className="navigation__list">
 					<li className="navigation__brand">
 						<CustomLink href="/">
-							<a className="brand">
-								<div>
-									<img
-										src="/icons/leafSVG.svg"
-										alt="to homepage"
-										className="brand__logo"
-									/>
-								</div>
+							<a className="navigation__home">
+								<RiHome2Line />
 							</a>
 						</CustomLink>
 					</li>

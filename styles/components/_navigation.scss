@@ -9,20 +9,27 @@
 		height: 5rem;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr auto auto 2%;
+		grid-template-columns: 1fr auto auto auto 2%;
 		justify-items: center;
 		align-items: center;
 
-		& > li:nth-child(2) {
-			justify-self: right;
+		& > li {
+			&:first-of-type {
+				justify-self: right;
+				padding-right: 0.5rem;
+			}
 		}
 	}
 
-	&__brand {
-		position: absolute;
-		left: 0;
-		top: 100%;
-		transform: translateY(-50%);
+	&__home {
+		display: block;
+		transform: translateY(0.3rem);
+		font-size: 2.2rem;
+		color: $white;
+
+		&--active {
+			color: $primary-light-40;
+		}
 	}
 
 	&__link {
