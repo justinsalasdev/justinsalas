@@ -61,7 +61,7 @@ export default function Home() {
 				<title>Justin Salas</title>
 				<link
 					rel="shortcut icon"
-					href="/icons/teaPNG64.png"
+					href="/icons/leafPNG64.png"
 					type="image/x-icon"
 				/>
 			</Head>

@@ -10,9 +10,12 @@
 	// font-weight: bold;
 
 	& > div {
+		transform-origin: 100% 0%;
 		display: flex;
 		align-items: center;
-		border-radius: 50%;
+		border-top-left-radius: 80%;
+		border-bottom-right-radius: 80%;
+		animation: float 2s linear 2s infinite;
 		box-shadow: 0.4rem 0.4rem 0.8rem $shadow-inactive;
 		&:active {
 			box-shadow: 0.2rem 0.2rem 0.4rem $shadow-active;
@@ -20,8 +23,8 @@
 	}
 
 	&__logo {
-		height: 7rem;
-		width: 7rem;
+		height: 5rem;
+		width: 5rem;
 		object-fit: contain;
 	}
 }

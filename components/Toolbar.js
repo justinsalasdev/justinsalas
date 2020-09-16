@@ -10,7 +10,7 @@ export default function Toolbar() {
 							<a className="brand">
 								<div>
 									<img
-										src="/icons/teaSVG.svg"
+										src="/icons/leafSVG.svg"
 										alt="to homepage"
 										className="brand__logo"
 									/>

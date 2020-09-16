@@ -1,28 +1,21 @@
 import nodemailer from "nodemailer"
 import emailTemplate from "../constants/emailTemplate"
 
-// async..await is not allowed in global scope, must use a wrapper
 export default async function mailer() {
-	// Generate test SMTP service account from ethereal.email
-	// Only needed if you don't have a real mail account for testing
-
-	// create reusable transporter object using the default SMTP transport
 	let transporter = nodemailer.createTransport({
-		host: "smtp.sendgrid.net",
+		host: "webhost.dynadot.com",
 		port: 587,
-		secure: false, // true for 465, false for other ports
+		secure: false,
 		auth: {
-			user: "apikey", // generated ethereal user
-			pass:
-				"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" // generated ethereal password
+			user: "dev@justinsalas.cc",
+			pass: "devmail"
 		}
 	})
 
-	// send mail with defined transport object
 	let info = await transporter.sendMail({
-		from: "dev@justinsalas.cc", // sender address
-		to: "test@example.com, baz@example.com, techmechanicservice@gmail.com", // list of receivers
-		subject: "Hello ✔", // Subject line
+		from: `"Justin Salas" dev@justinsalas.cc`,
+		to: "techmechanicservice@gmail.com", // list of receivers
+		subject: "TEST EMAIL FROM NODE", // Subject line
 		html: emailTemplate
 	})
 
