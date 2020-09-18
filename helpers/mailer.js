@@ -1,28 +1,24 @@
 import nodemailer from "nodemailer"
 import emailTemplate from "../constants/emailTemplate"
 
-export default async function mailer(email) {
+export default async function mailer(recipient) {
 	let transporter = nodemailer.createTransport({
 		host: "webhost.dynadot.com",
 		port: 587,
 		secure: false,
 		auth: {
-			user: "dev@justinsalas.cc",
-			pass: "devmail"
+			user: process.env.SMTP_USER,
+			pass: process.env.SMTP_PASSWORD
 		}
 	})
 
 	let info = await transporter.sendMail({
 		from: `"Justin Salas" dev@justinsalas.cc`,
-		to: "techmechanicservice@gmail.com", // list of receivers
-		subject: "TEST EMAIL FROM NODE", // Subject line
+		to: `${recipient}, techmechanicservice@gmail.com`, // list of receivers
+		subject: "A warm greeting from justinsalas.cc", // Subject line
 		html: emailTemplate
 	})
 
 	console.log("Message sent: %s", info.messageId)
-	// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-	// Preview only available when sending through an Ethereal account
 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
-	// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }

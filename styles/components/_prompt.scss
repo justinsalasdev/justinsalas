@@ -15,7 +15,7 @@
 
 	&__window {
 		@extend .fixed-center;
-		width: auto;
+		width: 30rem;
 		border-radius: 0.3rem;
 		font-size: 1.4rem;
 
@@ -24,7 +24,7 @@
 		box-shadow: $shadow-inactive;
 
 		@media screen and (max-width: $prompt-breakpoint) {
-			width: 80%;
+			width: 95%;
 		}
 	}
 
@@ -64,7 +64,6 @@
 	&__message {
 		text-align: center;
 		font-size: 1.6rem;
-		max-width: 30rem;
 		color: $primary-dark-30;
 
 		&2 {

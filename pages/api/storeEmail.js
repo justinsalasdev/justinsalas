@@ -9,8 +9,7 @@ handler.post(async (req, res) => {
 	try {
 		const emails = req.db.collection("emails")
 		await emails.insertOne(req.body)
-		console.log("email saved")
-		await mailer()
+		mailer(req.body.email)
 		res.json({
 			info: {
 				message: "Email saved successfully",
