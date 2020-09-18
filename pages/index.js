@@ -58,7 +58,7 @@ export default function Home() {
 				</Prompt>
 			) : null}
 			<Head>
-				<title>Justin Salas</title>
+				<title>justinsalas</title>
 				<link
 					rel="shortcut icon"
 					href="/icons/leafPNG64.png"
@@ -66,7 +66,7 @@ export default function Home() {
 				/>
 			</Head>
 			<Toolbar />
-			<main className="main">
+			<main className="main main--home">
 				<h1 className="greet">
 					Hi
 					<IoMdSunny className="greet__sun" /> I'm a web developer based in the

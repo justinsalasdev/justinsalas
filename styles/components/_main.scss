@@ -1,11 +1,6 @@
 @import "../common/variables.scss";
+@import "../common/mixins.scss";
 .main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-
 	&__action {
 		font-size: 3rem;
 		font-weight: 700;
@@ -16,5 +11,16 @@
 			vertical-align: middle;
 			transform: translateY(-0.2rem);
 		}
+	}
+
+	&--home {
+		@extend .flex-center;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	&--projects {
+		padding: 2rem;
+		// background-color: red;
 	}
 }

@@ -2,9 +2,11 @@
 @import "../common/animations.scss";
 
 .greet {
+	font-family: "Long Cang";
 	position: relative;
 	color: $primary-dark-20;
-	font-size: 3.8rem;
+	font-weight: 400;
+	font-size: 5rem;
 	padding: 2rem;
 	text-align: center;
 	max-width: 80rem;
@@ -18,6 +20,7 @@
 	}
 
 	&__tree {
+		font-size: 3.5rem;
 		display: inline-block;
 		transform-origin: 0 100%;
 		animation: treeshake 5s linear infinite;

@@ -1,0 +1,5 @@
+.projects {
+	.project:not(:first-of-type) {
+		margin-top: 2rem;
+	}
+}

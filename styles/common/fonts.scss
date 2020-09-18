@@ -1,8 +1,19 @@
-/* noto-sans-regular - latin */
-
+/* long-cang-regular - latin */
 @font-face {
-	font-family: "Lovers Quarrel";
-	src: url("/fonts/LoversQuarrel-Regular.ttf"); /* IE9 Compat Modes */
+	font-family: "Long Cang";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/long-cang-v5-latin-regular.eot"); /* IE9 Compat Modes */
+	src: local("Long Cang Regular"), local("LongCang-Regular"),
+		url("/fonts/long-cang-v5-latin-regular.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */ url("/fonts/long-cang-v5-latin-regular.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("/fonts/long-cang-v5-latin-regular.woff")
+			format("woff"),
+		/* Modern Browsers */ url("/fonts/long-cang-v5-latin-regular.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("/fonts/long-cang-v5-latin-regular.svg#LongCang") format("svg"); /* Legacy iOS */
 }
 /* nunito-italic - latin */
 @font-face {

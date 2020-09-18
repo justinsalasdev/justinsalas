@@ -1,0 +1,101 @@
+@import "../common/variables.scss";
+
+.project {
+	width: 40rem;
+	border-radius: 0.5rem;
+
+	box-shadow: 0.4rem 0.4rem 0.8rem $shadow-inactive;
+	&--natours {
+		background-image: linear-gradient(45deg, transparent, $natours);
+	}
+
+	&--nexter {
+		background-image: linear-gradient(45deg, transparent, $nexter);
+	}
+
+	&--trillo {
+		background-image: linear-gradient(45deg, transparent, $trillo);
+	}
+	&--tindog {
+		background-image: linear-gradient(45deg, transparent, $tindog);
+	}
+
+	& .icon {
+		vertical-align: middle;
+
+		&--link {
+			font-size: 3rem;
+			vertical-align: unset;
+			color: lighten(black, 30%);
+		}
+
+		&--html {
+			color: orangered;
+		}
+
+		&--css {
+			color: blue;
+		}
+
+		&--sass {
+			color: crimson;
+		}
+
+		&--bem {
+			color: black;
+		}
+	}
+
+	&__title {
+		padding-left: 0.5rem;
+		position: relative;
+		color: $white;
+		background-color: #ff4c68;
+		box-shadow: 0.1rem 0.1rem 0.2rem $shadow-inactive;
+
+		&--natours {
+			background-color: $natours;
+		}
+
+		&--nexter {
+			background-color: $nexter;
+		}
+
+		&--trillo {
+			background-color: $trillo;
+		}
+
+		& h2 {
+			padding: 0.5rem;
+			display: inline-block;
+			font-size: 2.2rem;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		right: 0.3rem;
+		top: 0.3rem;
+		&:active .icon {
+			color: $white;
+			text-shadow: 1rem;
+		}
+	}
+
+	&__description {
+		padding: 1rem;
+		// margin-bottom: 1rem;
+	}
+
+	&__technologies {
+		padding: 1rem;
+		& h3 {
+			font-size: 1.6rem;
+		}
+
+		& li {
+			font-size: 1.5rem;
+			padding: 0.5rem;
+		}
+	}
+}

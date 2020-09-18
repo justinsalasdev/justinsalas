@@ -9,7 +9,7 @@ export default function Toolbar() {
 					<li className="navigation__brand">
 						<CustomLink href="/">
 							<a className="navigation__home">
-								<RiHome2Line />
+								<RiHome2Line className="navigation__icon" />
 							</a>
 						</CustomLink>
 					</li>
