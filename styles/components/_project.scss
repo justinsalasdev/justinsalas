@@ -5,23 +5,38 @@
 	border-radius: 0.5rem;
 
 	box-shadow: 0.4rem 0.4rem 0.8rem $shadow-inactive;
+	&--manhours {
+		background: center / 23% no-repeat url("/icons/manhoursPNG.png"),
+			linear-gradient(45deg, transparent, rgba($manhours, 0.5));
+	}
+
+	&--burger {
+		background: center / 30% no-repeat url("/icons/burgerPNG.png"),
+			linear-gradient(45deg, transparent, $burger);
+	}
+
 	&--natours {
-		background-image: linear-gradient(45deg, transparent, $natours);
+		background: center / 30% no-repeat url("/icons/natoursPNG.png"),
+			linear-gradient(45deg, transparent, $natours);
 	}
 
 	&--nexter {
-		background-image: linear-gradient(45deg, transparent, $nexter);
+		background: center / 30% no-repeat url("/icons/nexterPNG.png"),
+			linear-gradient(45deg, transparent, $nexter);
 	}
 
 	&--trillo {
-		background-image: linear-gradient(45deg, transparent, $trillo);
+		background: center / 30% no-repeat url("/icons/trilloPNG.png"),
+			linear-gradient(45deg, transparent, $trillo);
 	}
 	&--tindog {
-		background-image: linear-gradient(45deg, transparent, $tindog);
+		background: center bottom / 30% no-repeat url("/icons/tindogPNG.png"),
+			linear-gradient(45deg, transparent, $tindog);
 	}
 
-	& .icon {
+	.icon {
 		vertical-align: middle;
+		font-size: 1.8rem;
 
 		&--link {
 			font-size: 3rem;
@@ -29,29 +44,68 @@
 			color: lighten(black, 30%);
 		}
 
+		&--burger {
+			font-size: 3rem;
+			vertical-align: unset;
+			color: darken(white, 10%);
+		}
+
+		&--manhours {
+			font-size: 2.5rem;
+			// vertical-align: unset;
+			color: white;
+		}
+
 		&--html {
-			color: orangered;
+			color: $html;
+		}
+		&--react {
+			color: $react;
+		}
+
+		&--redux {
+			color: $redux;
+		}
+
+		&--firebase {
+			color: $firebase;
 		}
 
 		&--css {
-			color: blue;
+			color: $css;
 		}
 
 		&--sass {
-			color: crimson;
+			color: $sass;
 		}
 
 		&--bem {
-			color: black;
+			color: $bem;
+		}
+
+		&--mongodb {
+			color: $mongodb;
+		}
+
+		&--node {
+			color: $node;
 		}
 	}
 
 	&__title {
-		padding-left: 0.5rem;
+		// padding-left: 0.5rem;
 		position: relative;
+		display: flex;
+		align-items: center;
 		color: $white;
 		background-color: #ff4c68;
-		box-shadow: 0.1rem 0.1rem 0.2rem $shadow-inactive;
+		box-shadow: 0 0.1rem 0.2rem $shadow-inactive;
+		&--manhours {
+			background-color: $manhours;
+		}
+		&--burger {
+			background-color: $burger;
+		}
 
 		&--natours {
 			background-color: $natours;
@@ -65,10 +119,21 @@
 			background-color: $trillo;
 		}
 
-		& h2 {
+		h2 {
 			padding: 0.5rem;
 			display: inline-block;
-			font-size: 2.2rem;
+			font-size: 2rem;
+		}
+
+		.logo {
+			margin-left: 0.5rem;
+			&--natours {
+				background: center / contain no-repeat url("/icons/natoursPNG.png");
+			}
+
+			display: inline-block;
+			width: 4rem;
+			height: 4rem;
 		}
 	}
 
@@ -76,6 +141,7 @@
 		position: absolute;
 		right: 0.3rem;
 		top: 0.3rem;
+
 		&:active .icon {
 			color: $white;
 			text-shadow: 1rem;
@@ -84,18 +150,43 @@
 
 	&__description {
 		padding: 1rem;
-		// margin-bottom: 1rem;
 	}
 
-	&__technologies {
+	&__technologies,
+	&__features {
+		border-top: 1px dashed rgba(black, 0.15);
+		color: lighten(black, 20%);
 		padding: 1rem;
-		& h3 {
+		h3 {
+			// color: lighten(black, 20%);
 			font-size: 1.6rem;
 		}
 
-		& li {
+		li {
 			font-size: 1.5rem;
 			padding: 0.5rem;
+		}
+	}
+
+	&__features {
+		// border-top: 1px dashed rgba(black, 0.2);
+		color: lighten(black, 20%);
+		padding: 1rem;
+		h3 {
+			// color: lighten(black, 20%);
+			font-size: 1.6rem;
+		}
+		li {
+			display: block;
+			position: relative;
+			margin-left: 2rem;
+			font-size: 1.5rem;
+			padding: 0.5rem;
+
+			& > .icon {
+				position: absolute;
+				left: -1.8rem;
+			}
 		}
 	}
 }
