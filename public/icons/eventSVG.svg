@@ -1,0 +1,27 @@
+<svg width="12.7" height="12.7" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" id="path4487" d="m4.93889,2.822162l4.93889,-0.00002l0,0.7056l-4.93889,0l0,-0.70558z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" id="path4507" d="m4.93889,4.233282l4.93889,-0.00002l0,0.7056l-4.93889,0l0,-0.70558z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" id="path4511" d="m4.93889,5.644432l0.70555,-0.00005l0,0.70557l-0.70555,0.00008l0,-0.7056z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" id="path4513" d="m4.93889,7.055552l0.70555,0l0,0.70555l-0.70555,0l0,-0.70555z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" id="path4517" d="m4.93889,8.466622l0.70555,0l0,0.70557l-0.70555,0l0,-0.70557z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="rect4537" d="m2.82222,2.822142l1.41111,0l0,0.70552l-1.41111,0l0,-0.70552z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="path4540" d="m2.82222,4.233262l1.41111,0l0,0.70554l-1.41111,0l0,-0.70554z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="path4544" d="m2.82222,5.644432l1.41111,0l0,0.70552l-1.41111,0l0,-0.70552z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="path4546" d="m2.82222,7.055552l1.41111,0l0,0.70552l-1.41111,0l0,-0.70552z"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="path4548" d="m2.82222,8.466672l1.41111,0l0,0.70552l-1.41111,0l0,-0.70552z"/>
+  <path stroke-opacity="0.8" fill-opacity="0.6" fill="#ffffff" stroke="#ffffff" stroke-width="0.705556px" id="path4562" d="m10.30111,9.595842l-1.12889,-1.12893"/>
+  <path fill-opacity="0.6" fill="#ffffff" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" id="path4564" d="m8.11389,5.644722a1.76389,1.76389 0 0 0 -1.76389,1.76387a1.76389,1.76389 0 0 0 1.76389,1.76389a1.76389,1.76389 0 0 0 1.76389,-1.76389a1.76389,1.76389 0 0 0 -1.76389,-1.76387zm0,0.70552a1.05833,1.05833 0 0 1 1.05833,1.05835a1.05833,1.05833 0 0 1 -1.05833,1.05832a1.05833,1.05833 0 0 1 -1.05833,-1.05832a1.05833,1.05833 0 0 1 1.05833,-1.05835z"/>
+  <rect fill="none" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" y="2.822112" x="4.233333" width="0.705556" id="rect4599" height="0.705556"/>
+  <rect fill="none" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" y="4.233242" x="4.233333" width="0.705556" id="rect4601" height="0.705556"/>
+  <rect fill="none" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" y="5.644382" x="4.233333" width="0.705556" id="rect4605" height="0.705556"/>
+  <rect fill="none" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" y="7.055512" x="4.233333" width="0.705556" id="rect4607" height="0.705556"/>
+  <rect fill="none" stroke-width="0.705556px" stroke-miterlimit="4" stroke-dashoffset="0" y="8.466642" x="4.233333" width="0.705556" id="rect4609" height="0.705556"/>
+ </g>
+</svg>

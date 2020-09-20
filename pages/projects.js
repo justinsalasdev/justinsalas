@@ -6,6 +6,8 @@ import Nexter from "../components/projects/Nexter"
 import Trillo from "../components/projects/Trillo"
 import Tindog from "../components/projects/Tindog"
 import Manhours from "../components/projects/Manhours"
+import Event from "../components/projects/Event"
+import Ecommerce from "../components/projects/Ecommerce"
 
 export default function About() {
 	return (
@@ -21,6 +23,8 @@ export default function About() {
 			<Toolbar />
 			<main className="main main--projects">
 				<ul className="projects">
+					<Ecommerce />
+					<Event />
 					<Manhours />
 					<BurgerBuilder />
 					<Natours />

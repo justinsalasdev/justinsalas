@@ -1,5 +1,12 @@
 .projects {
-	.project:not(:first-of-type) {
-		margin-top: 2rem;
+	width: 100%;
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+	justify-content: center;
+
+	& > li {
+		margin: 1rem;
 	}
 }

@@ -46,7 +46,7 @@ export default function Home() {
 					message1={
 						saved
 							? ""
-							: "Your developer can't take any more projects at the moment."
+							: `Your developer can't take any more projects at the moment.`
 					}
 					message2={
 						saved

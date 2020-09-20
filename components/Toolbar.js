@@ -20,7 +20,7 @@ export default function Toolbar() {
 					</li>
 					<li>
 						<CustomLink href="/certifications">
-							<a className="navigation__link">Certfications</a>
+							<a className="navigation__link">Credentials</a>
 						</CustomLink>
 					</li>
 					<li>

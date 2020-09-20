@@ -1,42 +1,43 @@
 import { DiCss3Full } from "react-icons/di"
 import { FaSass } from "react-icons/fa"
 import { RiFoldersLine } from "react-icons/ri"
-import { GrReactjs } from "react-icons/gr"
+import { ImHtmlFive } from "react-icons/im"
 import { SiNodeDotJs } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import { AiFillLock } from "react-icons/ai"
-import { FcMultipleSmartphones } from "react-icons/fc"
+import { AiFillDatabase } from "react-icons/ai"
 import { BiCalendarStar } from "react-icons/bi"
-import { SiGoogleanalytics } from "react-icons/si"
+import { SiJavascript } from "react-icons/si"
+import { FaFileCsv } from "react-icons/fa"
 
-export default function Manhours() {
+export default function Event() {
 	return (
-		<li className="project project--manhours">
-			<div className="project__title project__title--manhours">
-				<h2>Manhours Management System</h2>{" "}
+		<li className="project project--event">
+			<div className="project__title project__title--event">
+				<h2>Event Log Analyzer</h2>{" "}
 				<span className="project__link">
-					<AiFillLock className="icon icon--manhours" />
+					<AiFillLock className="icon icon--event" />
 				</span>
 			</div>
 
 			<p className="project__description">
-				Full stack web app for distributed manpower tracking and central
-				analytics
+				Full stack web applet that analyzes field event log and determines
+				defective field devices
 			</p>
 			<section className="project__features">
 				<h3>key features</h3>
 				<ul>
 					<li>
-						<FcMultipleSmartphones className="icon" />
-						Team member remotely enters own daily accomplishment
+						<FaFileCsv className="icon" />
+						Accepts CSV log of up to 100 thousand records
 					</li>
 					<li>
 						<BiCalendarStar className="icon" />
-						View daily, weekly or monthly team accomplishment
+						Outputs list of defective field devices
 					</li>
 					<li>
-						<SiGoogleanalytics className="icon" />
-						View monthly or annual analytics of consolidated data per project
+						<AiFillDatabase className="icon" />
+						Stores historical records of defective devices
 					</li>
 				</ul>
 			</section>
@@ -44,7 +45,10 @@ export default function Manhours() {
 				<h3>key technologies</h3>
 				<ul>
 					<li>
-						<GrReactjs className="icon icon--react" /> React
+						<ImHtmlFive className="icon icon--html" /> HTML5
+					</li>
+					<li>
+						<SiJavascript className="icon icon--javascript" /> Javascript
 					</li>
 					<li>
 						<SiNodeDotJs className="icon icon--node" /> Express

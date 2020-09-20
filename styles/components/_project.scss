@@ -1,17 +1,29 @@
 @import "../common/variables.scss";
+@import "../common/animations.scss";
 
 .project {
-	width: 40rem;
+	// width: 40rem;
 	border-radius: 0.5rem;
-
 	box-shadow: 0.4rem 0.4rem 0.8rem $shadow-inactive;
+	color: lighten(black, 20%);
+	&--ecommerce {
+		min-height: 30rem;
+		color: darken(white, 10%);
+		background: center / 80% no-repeat url("/icons/constructionSVG.svg"),
+			linear-gradient(45deg, transparent, $ecommerce);
+	}
+	&--event {
+		background: center / 40% no-repeat url("/icons/eventSVG.svg"),
+			linear-gradient(45deg, transparent, $manhours);
+	}
+
 	&--manhours {
-		background: center / 23% no-repeat url("/icons/manhoursPNG.png"),
-			linear-gradient(45deg, transparent, rgba($manhours, 0.5));
+		background: center / 23% no-repeat url("/icons/manhoursSVG.svg"),
+			linear-gradient(45deg, transparent, $manhours);
 	}
 
 	&--burger {
-		background: center / 30% no-repeat url("/icons/burgerPNG.png"),
+		background: center / 27% no-repeat url("/icons/burgerSVG.svg"),
 			linear-gradient(45deg, transparent, $burger);
 	}
 
@@ -30,7 +42,7 @@
 			linear-gradient(45deg, transparent, $trillo);
 	}
 	&--tindog {
-		background: center bottom / 30% no-repeat url("/icons/tindogPNG.png"),
+		background: center 55% / 30% no-repeat url("/icons/tindogPNG.png"),
 			linear-gradient(45deg, transparent, $tindog);
 	}
 
@@ -50,7 +62,9 @@
 			color: darken(white, 10%);
 		}
 
-		&--manhours {
+		&--ecommerce,
+		&--manhours,
+		&--event {
 			font-size: 2.5rem;
 			// vertical-align: unset;
 			color: white;
@@ -61,6 +75,10 @@
 		}
 		&--react {
 			color: $react;
+		}
+
+		&--javascript {
+			color: $javascript;
 		}
 
 		&--redux {
@@ -100,7 +118,13 @@
 		color: $white;
 		background-color: #ff4c68;
 		box-shadow: 0 0.1rem 0.2rem $shadow-inactive;
-		&--manhours {
+
+		&--ecommerce {
+			background-color: $ecommerce;
+		}
+
+		&--manhours,
+		&--event {
 			background-color: $manhours;
 		}
 		&--burger {
@@ -122,7 +146,7 @@
 		h2 {
 			padding: 0.5rem;
 			display: inline-block;
-			font-size: 2rem;
+			font-size: 1.7rem;
 		}
 
 		.logo {
@@ -155,7 +179,7 @@
 	&__technologies,
 	&__features {
 		border-top: 1px dashed rgba(black, 0.15);
-		color: lighten(black, 20%);
+
 		padding: 1rem;
 		h3 {
 			// color: lighten(black, 20%);
@@ -189,4 +213,6 @@
 			}
 		}
 	}
+
+	animation: transition-in-left 1s cubic-bezier(0, 1, 1, 1);
 }
