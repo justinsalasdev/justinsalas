@@ -1,0 +1,260 @@
+@import "../common/variables.scss";
+@import "../common/mixins.scss";
+@import "../common/animations.scss";
+
+.completed {
+	margin: auto;
+	margin-bottom: 5rem;
+
+	&__heading {
+		color: $primary-dark-20;
+		margin-bottom: 2rem;
+		text-align: center;
+		font-weight: 700;
+		font-size: 5rem;
+		font-family: "Long Cang";
+	}
+
+	&__courses {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+		gap: 2rem;
+		justify-content: center;
+	}
+
+	&__course {
+		box-shadow: 0.2rem 0.2rem 0.4rem $shadow-inactive;
+		position: relative;
+		height: 8rem;
+		padding: 0.5rem;
+
+		&--data,
+		&--angela {
+			@extend .completed__course;
+			background-color: purple;
+		}
+
+		&--reactnative,
+		&--react,
+		&--ajs,
+		&--colt,
+		&--css {
+			@extend .completed__course;
+			background-color: lightskyblue;
+		}
+		&--acss {
+			@extend .completed__course;
+			background-color: crimson;
+		}
+
+		&--javascript {
+			@extend .completed__course;
+			background-color: navy;
+		}
+
+		&--freecode,
+		&--freecode2,
+		&--weird {
+			@extend .completed__course;
+			background-color: lighten(black, 20%);
+		}
+
+		&--node {
+			@extend .completed__course;
+			background-color: indigo;
+		}
+		&--node2 {
+			@extend .completed__course;
+			background-color: cadetblue;
+		}
+		&--mongodb {
+			@extend .completed__course;
+			background-color: $primary;
+		}
+
+		&--graphql {
+			@extend .completed__course;
+			background-color: $trillo;
+		}
+
+		animation-name: transition-in-left;
+		animation-timing-function: cubic-bezier(0, 1, 1, 1);
+		animation-fill-mode: backwards;
+		animation-duration: 3s;
+		@include delays;
+
+		&:hover {
+			transform: scale(1.02);
+			box-shadow: 0.6rem 0.6rem 1.2rem $shadow-inactive;
+			transition: transform 0.1s ease-out;
+		}
+	}
+
+	&__logo {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 35%;
+		height: 100%;
+
+		&--angela {
+			@extend .completed__logo;
+			background: url("/images/angelaJPG.jpg") center / 120% no-repeat;
+		}
+
+		&--angela {
+			@extend .completed__logo;
+			background: url("/images/angelaJPG.jpg") center / 120% no-repeat;
+		}
+
+		&--colt {
+			@extend .completed__logo;
+			background: url("/images/webdevbootcampJPG.jpg") center / cover no-repeat;
+		}
+
+		&--css {
+			@extend .completed__logo;
+			background: url("/images/cssJPG.jpg") center / cover no-repeat;
+		}
+		&--acss {
+			@extend .completed__logo;
+			background: url("/images/advanceCSS.jpg") center / cover no-repeat;
+		}
+
+		&--javascript {
+			@extend .completed__logo;
+			background: url("/images/javascript.jpg") center / cover no-repeat;
+		}
+
+		&--weird {
+			@extend .completed__logo;
+			background: url("/images/weird.jpg") center / cover no-repeat;
+		}
+
+		&--ajs {
+			@extend .completed__logo;
+			background: url("/images/ajs.jpg") center / cover no-repeat;
+		}
+
+		&--node {
+			@extend .completed__logo;
+			background: url("/images/node2PNG.png") center / cover no-repeat;
+		}
+
+		&--node2 {
+			@extend .completed__logo;
+			background: url("/images/node.jpg") center / cover no-repeat;
+		}
+
+		&--react {
+			@extend .completed__logo;
+			background: url("/images/reactJPG.jpg") center / cover no-repeat;
+		}
+
+		&--mongodb {
+			@extend .completed__logo;
+			background: url("/images/mongodb.jpg") center / cover no-repeat;
+		}
+		&--freecode,
+		&--freecode2 {
+			@extend .completed__logo;
+			background: url("/images/freecode.png") center / cover no-repeat;
+		}
+		&--data {
+			@extend .completed__logo;
+			background: url("/images/dataScienceSVG.svg") center / cover no-repeat;
+		}
+		&--reactnative {
+			@extend .completed__logo;
+			background: url("/images/reactnativePNG.png") center / cover no-repeat;
+		}
+		&--graphql {
+			@extend .completed__logo;
+			background: url("/images/graphQLPNG.png") center / cover no-repeat;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		display: block;
+		top: 1rem;
+		left: 38%;
+		font-size: 1.9rem;
+		font-weight: bold;
+		// text-align: center;
+		text-shadow: 0.5rem;
+
+		&--graphql,
+		&--data,
+		&--freecode,
+		&--freecode2,
+		&--mongodb,
+		&--node,
+		&--node2,
+		&--weird,
+		&--javascript,
+		&--acss,
+		&--angela {
+			@extend .completed__title;
+			color: $white-dark-10;
+		}
+		&--reactnative,
+		&--react,
+		&--ajs,
+		&--colt,
+		&--css {
+			@extend .completed__title;
+			color: black;
+		}
+	}
+
+	&__instructor {
+		font-size: 1.5rem;
+		padding: 0.5rem;
+		position: absolute;
+		bottom: 0.3rem;
+		right: 0.3rem;
+
+		&--graphql,
+		&--data,
+		&--freecode,
+		&--freecode2,
+		&--mongodb,
+		&--node,
+		&--node2,
+		&--weird,
+		&--javascript,
+		&--acss,
+		&--angela {
+			@extend .completed__instructor;
+			color: $white-dark-10;
+		}
+		&--colt,
+		&--css,
+		&--reactnative,
+		&--react,
+		&--ajs {
+			@extend .completed__instructor;
+			color: black;
+		}
+	}
+
+	&__link {
+		border-bottom-left-radius: 0.5rem;
+		background-color: rgba(white, 0.5);
+		display: block;
+		padding: 0.2rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:active .icon {
+			color: white;
+		}
+
+		.icon {
+			vertical-align: middle;
+			font-size: 2rem;
+		}
+	}
+}

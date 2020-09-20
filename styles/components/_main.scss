@@ -19,8 +19,15 @@
 		flex-wrap: wrap;
 	}
 
-	&--projects {
-		padding: 2rem;
-		// background-color: red;
+	&--projects,
+	&--credentials {
+		margin: auto;
+		margin-top: 2rem;
+		width: 90%;
+		@media screen and (max-width: 24rem) {
+			padding: 0.5rem;
+			margin-top: initial;
+			width: 100%;
+		}
 	}
 }
