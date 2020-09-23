@@ -58,11 +58,38 @@ export default function Home() {
 				</Prompt>
 			) : null}
 			<Head>
-				<title>justinsalas</title>
+				{/* generic meta tag*/}
+				<title>justinsalas | Home</title>
 				<link
 					rel="shortcut icon"
 					href="/icons/leafPNG64.png"
 					type="image/x-icon"
+				/>
+				<meta
+					name="description"
+					content="A web developer based in the Philippines"
+				/>
+				<meta name="robots" content="index, nofollow" />
+				<meta name="author" content="Justin Salas" />
+
+				{/* facebook open graph*/}
+				<meta property="og:type" content="profile" />
+				<meta property="og:title" content="Justin Salas" />
+				<meta property="og:url" content="https://justinsalas.cc" />
+				<meta
+					property="og:image"
+					content="https://justinsalas.cc/icons/leafPNG512.png"
+				/>
+				<meta property="profile:first_name" content="Justin" />
+				<meta property="profile:last_name" content="Salas" />
+
+				{/* twitter cards*/}
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:site" content="justinsalas.cc" />
+				<meta name="twitter:title" content="Justin Salas" />
+				<meta
+					name="twitter:description"
+					content="A web developer based in the Philippines"
 				/>
 			</Head>
 			<Toolbar />
