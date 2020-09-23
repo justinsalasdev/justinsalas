@@ -25,6 +25,7 @@ export default function Form({ showForm, saveEmail, state, dispatch }) {
 		showForm(false)
 	}
 
+	//saveEmail automatically receives form data as argument
 	return (
 		<div className="form__container prompt__component">
 			{error && error.type === "client" ? (

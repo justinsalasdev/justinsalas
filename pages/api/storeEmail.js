@@ -1,11 +1,14 @@
 import nextConnect from "next-connect"
 import initDatabase from "../../middlewares/initDatabase"
+import validator from "../../middlewares/validator"
 import mailer from "../../helpers/mailer"
 
 const handler = nextConnect()
 handler.use(initDatabase)
+handler.use(validator)
 
 handler.post(async (req, res) => {
+	console.log(req.validBody)
 	try {
 		const emails = req.db.collection("emails")
 		await emails.insertOne(req.body)

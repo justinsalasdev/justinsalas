@@ -38,7 +38,7 @@ function reducer(state, action) {
 export default function useSaveEmail() {
 	const [state, dispatch] = useReducer(reducer, initialState)
 
-	async function saveEmail(email) {
+	async function saveEmail(formData) {
 		dispatch({ type: "start" })
 		try {
 			const response = await fetch(`/api/storeEmail`, {
@@ -47,7 +47,10 @@ export default function useSaveEmail() {
 					"Content-Type": "application/json",
 					Accept: "application/json"
 				},
-				body: JSON.stringify(email)
+				body: JSON.stringify({
+					...formData,
+					token: process.env.NEXT_PUBLIC_TOKEN
+				})
 			})
 
 			const data = await response.json()

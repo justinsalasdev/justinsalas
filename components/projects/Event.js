@@ -6,7 +6,7 @@ import { SiNodeDotJs } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import { AiFillLock } from "react-icons/ai"
 import { AiFillDatabase } from "react-icons/ai"
-import { BiCalendarStar } from "react-icons/bi"
+import { FaTable } from "react-icons/fa"
 import { SiJavascript } from "react-icons/si"
 import { FaFileCsv } from "react-icons/fa"
 
@@ -32,7 +32,7 @@ export default function Event() {
 						Accepts CSV log of up to 100 thousand records
 					</li>
 					<li>
-						<BiCalendarStar className="icon" />
+						<FaTable className="icon" />
 						Outputs list of defective field devices
 					</li>
 					<li>

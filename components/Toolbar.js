@@ -23,11 +23,6 @@ export default function Toolbar() {
 							<a className="navigation__link">Credentials</a>
 						</CustomLink>
 					</li>
-					<li>
-						<CustomLink href="/finance">
-							<a className="navigation__link">Personal Finance</a>
-						</CustomLink>
-					</li>
 				</ul>
 			</nav>
 		</div>
