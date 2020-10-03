@@ -8,6 +8,7 @@ import Tindog from "../components/projects/Tindog"
 import Manhours from "../components/projects/Manhours"
 import Event from "../components/projects/Event"
 import Ecommerce from "../components/projects/Ecommerce"
+import Finance from "../components/projects/Finance"
 
 export default function About() {
 	return (
@@ -24,6 +25,7 @@ export default function About() {
 			<main className="main main--projects">
 				<ul className="projects">
 					<Ecommerce />
+					<Finance />
 					<Event />
 					<Manhours />
 					<BurgerBuilder />
